@@ -11,7 +11,7 @@ function end( num, word ){
 		var a = num % 100;
 		if (10 <= a && a <= 20){
 			if (word == "час") return num + " " + word + "ов ";
-			else return num + " " + word + " ";
+			else return num + " " + word;
 		}
 		else{
 			if (word == "час") {
@@ -23,11 +23,11 @@ function end( num, word ){
 			else {
 				var c = num % 10;
 				if( c == 1 ) return num + " " + word + "а ";
-				else if ( 2 <= c && c <= 4 ) return num + " " + word + "ы ";
-				else if ( 5 <= c && c <= 9 ) return num + " " + word + " ";
+				else if ( 2 <= c && c <= 4 ) return num + " " + word + "ы";
+				else if ( 5 <= c && c <= 9 ) return num + " " + word;
 			}
 		}
 	}	
 }
 
-process.stdout.write(end(hours,"час")+end(minutes,"минут")+end(seconds,"секунд"))
+process.stdout.write(end(hours,"час")+end(minutes,"минут")+" "+end(seconds,"секунд"))
