@@ -48,5 +48,5 @@ function sdvigNazad(arr1, arr2){
 return start;	
 //alert(start);
 }
-if (sdvigNazad(a, b) > sdvigVpered(a, b)) alert(sdvigVpered(a, b));
-else alert(sdvigNazad(a, b));
+if (sdvigNazad(a, b) > sdvigVpered(a, b)) process.stdout.write(sdvigVpered(a, b));
+else process.stdout.write(sdvigNazad(a, b));
